@@ -30,6 +30,9 @@
       position: relative;
       width: 100%;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .banner-container img {
@@ -37,7 +40,17 @@
       max-width: 1000px;
       display: block;
       height: auto;
-      margin: 0 auto;
+    }
+
+    /* Publishing House title below banner */
+    .publishing-title {
+      font-size: 2.2rem;
+      color: white;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: 600;
+      padding: 30px 20px 15px 20px;
+      margin: 0;
     }
 
     /* Since we don't have the actual banner image, let's simulate it */
@@ -61,19 +74,8 @@
       margin-bottom: 10px;
     }
 
-    .overlay-text {
-      position: absolute;
-      bottom: 5%;
-      width: 100%;
-      text-align: center;
-      font-size: 2.0rem;
-      color: white;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-      letter-spacing: 2px;
-    }
-
     .content {
-      padding: 40px 20px;
+      padding: 15px 20px 40px 20px;
       max-width: 800px;
       margin: 0 auto;
       font-size: 1.1rem;
@@ -135,18 +137,22 @@
 
     /* Responsive Styles */
     @media (max-width: 768px) {
+      .banner-container img {
+        width: 95%;
+      }
+
       .banner-placeholder .logo-text {
         font-size: 2.5rem;
       }
 
-      .overlay-text {
+      .publishing-title {
         font-size: 1.6rem;
-        bottom: 12%;
+        padding: 25px 15px 10px 15px;
       }
 
       .content {
         font-size: 1rem;
-        padding: 30px 15px;
+        padding: 10px 15px 30px 15px;
       }
 
       .button {
@@ -161,6 +167,10 @@
     }
 
     @media (max-width: 480px) {
+      .banner-container img {
+        width: 100%;
+      }
+
       .banner-placeholder {
         height: 300px;
       }
@@ -169,9 +179,9 @@
         font-size: 2rem;
       }
 
-      .overlay-text {
+      .publishing-title {
         font-size: 1.2rem;
-        bottom: 15%;
+        padding: 20px 10px 8px 10px;
       }
 
       .content {
@@ -197,10 +207,12 @@
 <body>
 
   <!-- Banner -->
- <div class="banner-container">
+  <div class="banner-container">
     <img src="https://raw.githubusercontent.com/elisabethboylan/bigtopballet-frontend/main/BigTopBallet_Banner_Publishing_Website.png" alt="Big Top Ballet Banner">
-    <div class="overlay-text">PUBLISHING HOUSE</div>
   </div>
+  
+  <!-- Publishing House Title -->
+  <div class="publishing-title">PUBLISHING HOUSE</div>
 
   <!-- Main Content -->
   <div class="content">
@@ -231,6 +243,9 @@
     © Big Top Ballet Inc. 2025. All rights reserved.<br>
     697 3rd Avenue, STE 623, New York, NY, 10017
   </footer>
+
+</body>
+</html>
 
 </body>
 </html>
